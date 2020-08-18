@@ -2,7 +2,17 @@ html, body {
     margin: 0;
     padding: 0;
 }
+body, #app {
+    height: 100%;
+}
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
 @import "fonts";
 
-
 @import 'parts/navbar';
+

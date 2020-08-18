@@ -6,9 +6,10 @@
     <title>{{config('app.name','Laravel')}}</title>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-
+    <script src="{{asset('js/app.js')}}" defer></script>
 </head>
 <body>
+<div id="app">
     <nav>
         <div>
             <a href="#">Link 1</a>
@@ -17,5 +18,6 @@
         </div>
     </nav>
     @yield('content')
+</div>
 </body>
 </html>
