@@ -1,8 +1,8 @@
 nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 10px;
+    padding: 20px;
     background-color: #fcd772;
 
     div {
@@ -25,6 +25,8 @@ nav {
             &:hover {
                 transition: 0.3s;
                 border-bottom-color: red;
+                text-decoration: none;
+                color: #2d2d2e;
             }
         }
     }

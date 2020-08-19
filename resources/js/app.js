@@ -19,6 +19,9 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+import { BSpinner } from 'bootstrap-vue'
+Vue.component('b-spinner', BSpinner)
+
 Vue.component('trending-component', require('./components/TrendingComponent.vue').default);
 Vue.component('show-component', require('./components/ShowComponent.vue').default);
 

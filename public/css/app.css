@@ -5,6 +5,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  line-height: 1;
 }
 
 body,
@@ -10918,9 +10919,9 @@ a.text-dark:focus {
 
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px 10px;
+  padding: 20px;
   background-color: #fcd772;
 }
 
@@ -10946,5 +10947,7 @@ nav div a:first-child {
 nav div a:hover {
   transition: 0.3s;
   border-bottom-color: red;
+  text-decoration: none;
+  color: #2d2d2e;
 }
 

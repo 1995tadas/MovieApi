@@ -1,1 +1,10 @@
+.spinner, .error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2em
+}
 
+.error {
+    left: 45%;
+}

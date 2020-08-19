@@ -13,7 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/{id}','MovieController@show')->name('show');
+Route::view('/','home')->name('home');
+Route::get('/{id}','MovieController@show')->where(['id' => '[0-9]{6}'])->name('show');

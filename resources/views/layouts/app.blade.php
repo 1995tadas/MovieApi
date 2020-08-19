@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <script src="{{asset('js/app.js')}}" defer></script>
+    <script src="https://kit.fontawesome.com/3c45c07865.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="app">
     <nav>
+        <div>
+            <a href="{{route('home')}}">Home</a>
+        </div>
         <div>
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>

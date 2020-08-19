@@ -1,11 +1,13 @@
 <template>
-    <div class="carousel">
-        <a :href="showRoute+'/'+movie['id']" class="item" v-for="(movie, index) in this.movies"
-           :key="index"
+    <div v-if="loaded" class="carousel">
+        <a @click.prevent="changePage(-3)" class="navigation"><i class="fas fa-angle-left"></i></a>
+        <a :href="showRoute+'/'+movie['id']" class="item" v-for="movie in this.movies"
            :style="{ backgroundImage: 'url(https://image.tmdb.org/t/p/w342/' + movie['poster_path'] + ')' }">
             <div class="item-title">{{ movie['original_title'] }}</div>
         </a>
+        <a @click.prevent="changePage(3)" class="navigation"><i class="fas fa-angle-right"></i></a>
     </div>
+    <b-spinner v-else class='spinner' style="width: 3rem; height: 3rem;" label="Large Spinner"></b-spinner>
 </template>
 
 <script>
@@ -23,9 +25,11 @@ export default {
     data() {
         return {
             movieList: '',
-            start: 0,
-            end: 3,
+            start: -3,
+            end: 0,
             movies: [],
+            loaded: false,
+            interval: null
         };
     },
     mounted() {
@@ -35,59 +39,83 @@ export default {
         fetchMovies() {
             axios.get(this.trendingUrl).then(response => {
                 this.movieList = response.data.results;
-                this.cutMovie();
-                this.cutMovieInterval()
+                this.changePage(3)
             }).catch((error) => {
                 console.log(error)
-            })
+            }).finally(
+                setTimeout(
+                    () => {
+                        this.loaded = true
+                    }, 200
+                )
+            )
         },
-        cutMovie() {
-            this.movies = this.movieList.slice(this.start, this.end);
-            if (this.movieList.length - 2 <= this.end) {
+        cutMovieList(step) {
+            this.start += step;
+            this.end += step;
+            if (this.movieList.length - 2 < this.end) {
                 this.start = 0;
                 this.end = 3;
-            } else {
-                this.start += 3;
-                this.end += 3;
             }
+            if (this.start < 0) {
+                this.start = this.movieList.length - 2 + this.start;
+                this.end = this.movieList.length - 2 + this.end;
+            }
+            this.movies = this.movieList.slice(this.start, this.end);
         },
-        cutMovieInterval() {
-            setInterval(() => {
-                    this.cutMovie();
+        cutMovieListInterval() {
+            clearInterval(this.interval);
+            this.interval = setInterval(() => {
+                    this.cutMovieList(3);
                 }, 3000
             )
+        },
+        changePage(step) {
+            this.cutMovieList(step)
+            this.cutMovieListInterval();
         }
     }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .carousel {
     display: flex;
     align-content: center;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 5% 0;
-}
 
-.item {
-    width: 20%;
-    height: 60vh;
-    background-color: red;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
+    .navigation {
+        display: flex;
+        align-items: center;
+        font-size: 3rem;
 
-.item-title {
-    padding: 10px;
-    font-size: 20px;
-    color: white;
-    text-shadow: -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+        &:hover {
+            text-decoration: none;
+            cursor: pointer
+        }
+    }
+
+    .item {
+        width: 20%;
+        height: 60vh;
+        transition: 0.3s;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        .item-title {
+            padding: 10px;
+            font-size: 20px;
+            color: white;
+            text-shadow: -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        }
+    }
 }
 </style>
