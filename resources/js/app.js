@@ -24,6 +24,7 @@ Vue.component('b-spinner', BSpinner)
 
 Vue.component('trending-component', require('./components/TrendingComponent.vue').default);
 Vue.component('show-component', require('./components/ShowComponent.vue').default);
+Vue.component('search-component', require('./components/SearchComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

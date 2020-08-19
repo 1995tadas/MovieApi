@@ -2,22 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baeea96d-e162-4ee0-8215-55625c6e5a61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/placeholder-movieimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/SearchComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/test.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/parts/_search.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ShowComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ShowComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/TrendingComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/TrendingComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/parts/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/parts/_navbar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +25,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -149,7 +153,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -157,10 +161,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xamp\htdocs\movieApi\resources\views" />
       <recent name="C:\xamp\htdocs\movieApi\public\images" />
       <recent name="C:\xamp\htdocs\movieApi\public" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xamp\htdocs\movieApi\resources\views\layouts" />
       <recent name="C:\xamp\htdocs\movieApi\resources\js\components" />
       <recent name="C:\xamp\htdocs\movieApi" />
     </key>
@@ -182,7 +188,7 @@
       <workItem from="1597331938553" duration="6398000" />
       <workItem from="1597493542682" duration="530000" />
       <workItem from="1597745146041" duration="25864000" />
-      <workItem from="1597817289547" duration="21205000" />
+      <workItem from="1597817289547" duration="34074000" />
     </task>
     <task id="LOCAL−00001" summary="Trending movies &amp; single movie show views">
       <created>1597777272207</created>
@@ -190,7 +196,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1597777272207</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Trending navigation and validations">
+      <created>1597841170679</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1597841170679</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +211,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Trending movies &amp; single movie show views" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trending movies &amp; single movie show views" />
+    <MESSAGE value="Trending navigation and validations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trending navigation and validations" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597340248651">
@@ -210,10 +223,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1597771337300" />
-    <state x="132" y="0" width="1011" height="834" key="CommitChangelistDialog2" timestamp="1597777266997">
+    <state x="132" y="0" width="1011" height="834" key="CommitChangelistDialog2" timestamp="1597841166118">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="132" y="0" width="1011" height="834" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1597777266997" />
+    <state x="132" y="0" width="1011" height="834" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1597841166118" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1597750561618">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -242,10 +255,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1597343176809" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1597777277443">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1597841175815">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1597777277443" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1597841175815" />
     <state x="32" y="26" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597831368911">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -254,9 +267,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1597774310768" />
-    <state x="430" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1597831820397">
+    <state x="430" y="154" width="672" height="678" key="search.everywhere.popup" timestamp="1597852558499">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="430" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1597831820397" />
+    <state x="430" y="154" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1597852558499" />
   </component>
 </project>

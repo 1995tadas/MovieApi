@@ -16,6 +16,10 @@
             <a href="{{route('home')}}">Home</a>
         </div>
         <div>
+            <search-component
+                search-route="{{route('search.index',['query' => '/'])}}"
+            >
+            </search-component>
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
             <a href="#">Link 3</a>
