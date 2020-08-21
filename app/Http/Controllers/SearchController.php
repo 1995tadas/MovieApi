@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SearchRequest;
+use App\Services\PaginationService;
 use GuzzleHttp\Client;
 
 class SearchController extends Controller
 {
-    public function index($query)
+    public function index(SearchRequest $request, $query, PaginationService $paginationService)
     {
-        if (request()->filled('page')) {
-            $page = request()->page;
+        if ($request->filled('page')) {
+            $page = $request->page;
         } else {
             $page = 1;
         }
@@ -31,11 +33,16 @@ class SearchController extends Controller
         } catch (\Exception $e) {
             $status = $e->getResponse()->getStatusCode();
         }
-
-        if ($status === 200) {
-            return view('search', ['data' => json_decode($response->getBody())]);
-        } else if ($status === 422) {
+        if (isset($response)) {
+            $body = json_decode($response->getBody());
+        }
+        if ($status === 422 || $status === 34) {
             return view('search', ['error' => 'Page don\'t exist']);
+        } else if ($body->total_pages <= 0) {
+            return view('search', ['error' => 'Nothing was found']);
+        } else if ($status === 200) {
+            $pageList = $paginationService->paginationForSearch($page, $body->total_pages);
+            return view('search', ['data' => $body], compact('pageList', 'query'));
         }
     }
 }

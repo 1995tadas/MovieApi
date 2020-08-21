@@ -1,7 +1,7 @@
 <template>
     <form method="get" :action="searchRoute+'/'+query">
-        <input type="text" v-model="query">
-        <button><i class="fas fa-search"></i></button>
+        <input @mouseover="hover = true" @mouseleave="hover = false" type="text" v-model="query" required>
+        <button :class="{hoverButton:hover}" :disabled="!query"><i class="fas fa-search"></i></button>
     </form>
 </template>
 
@@ -15,14 +15,47 @@ export default {
     },
     data() {
         return {
-            query: ''
+            query: '',
+            hover: false
         }
     }
 }
 </script>
 
 <style scoped lang="scss">
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
 form {
     display: inline;
+    width: 100px;
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+
+    input {
+        &:hover {
+            border: initial;
+            padding: 1px 2px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    button {
+        border: 0.1px solid gray;
+        border-left: 0;
+        margin-left: -5px;
+        padding: 2.5px 5px;
+        background-color: white;
+    }
+
+    .hoverButton {
+        border: 0;
+        padding: 1px 5px;
+    }
 }
 </style>

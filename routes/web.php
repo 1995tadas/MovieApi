@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/','home')->name('home');
-Route::get('/{id}','MovieController@show')->where(['id' => '[0-9]{1,6}'])->name('movie.show');
-Route::get('search/{query}','SearchController@index')->name('search.index');
+Route::view('/', 'home')->name('home');
+Route::get('/{id}', 'MovieController@show')->where(['id' => '[0-9]{1,6}'])->name('movie.show');
+Route::get('search/{query}', 'SearchController@index')->name('search.index');

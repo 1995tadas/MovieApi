@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baeea96d-e162-4ee0-8215-55625c6e5a61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/app.js.LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/SearchRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/PaginationService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/placeholder-movieimage-154.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/SearchComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/SearchComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ShowComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ShowComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/parts/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/parts/_navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/parts/_search.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/parts/_search.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/search.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,15 +160,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xamp\htdocs\movieApi\resources\views" />
-      <recent name="C:\xamp\htdocs\movieApi\public\images" />
-      <recent name="C:\xamp\htdocs\movieApi\public" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xamp\htdocs\movieApi\resources\views\layouts" />
       <recent name="C:\xamp\htdocs\movieApi\resources\js\components" />
       <recent name="C:\xamp\htdocs\movieApi" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xamp\htdocs\movieApi\public\images" />
+      <recent name="C:\xamp\htdocs\movieApi\resources\views" />
+      <recent name="C:\xamp\htdocs\movieApi\public" />
     </key>
   </component>
   <component name="RunManager">
@@ -181,7 +189,8 @@
       <workItem from="1597493542682" duration="530000" />
       <workItem from="1597745146041" duration="25864000" />
       <workItem from="1597817289547" duration="34651000" />
-      <workItem from="1597924484794" duration="458000" />
+      <workItem from="1597924484794" duration="1146000" />
+      <workItem from="1597993845689" duration="23885000" />
     </task>
     <task id="LOCAL−00001" summary="Trending movies &amp; single movie show views">
       <created>1597777272207</created>
@@ -201,7 +210,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1597867302656</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Movie search functionality">
+      <created>1597925064786</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1597925064786</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +230,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Movie search functionality" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="223" y="72" width="1089" height="727" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597995425551">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="223" y="72" width="1089" height="727" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1597995425551" />
     <state x="539" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597340248651">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -223,10 +242,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1597771337300" />
-    <state x="132" y="0" width="1011" height="834" key="CommitChangelistDialog2" timestamp="1597867264626">
+    <state x="132" y="0" width="1011" height="834" key="CommitChangelistDialog2" timestamp="1597925062219">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="132" y="0" width="1011" height="834" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1597867264626" />
+    <state x="132" y="0" width="1011" height="834" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1597925062219" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1597750561618">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -255,10 +274,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1597343176809" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1597867340724">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1597925070517">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1597867340724" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1597925070517" />
     <state x="32" y="26" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597831368911">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -267,9 +286,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1597774310768" />
-    <state x="430" y="154" width="672" height="678" key="search.everywhere.popup" timestamp="1597852558499">
+    <state x="430" y="154" width="672" height="678" key="search.everywhere.popup" timestamp="1598034202018">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="430" y="154" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1597852558499" />
+    <state x="430" y="154" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1598034202018" />
   </component>
 </project>

@@ -1,9 +1,16 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     background-color: #fcd772;
+    @include media-breakpoint-down(sm) {
+        justify-content: center;
+        flex-direction: column;
+    }
 
     div {
         transition: 0.5s linear;

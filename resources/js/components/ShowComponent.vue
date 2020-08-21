@@ -39,10 +39,6 @@
                         {{ this.extract(movie['production_companies']) }}
                     </span>
                 </li>
-                <li v-show="movie['homepage']">
-                    <span>Homepage</span>
-                    <span><a target="_blank" :href="movie['homepage']">Link</a></span>
-                </li>
                 <li>
                     <span>Status</span>
                     <span>{{ movie['status'] }}</span>
@@ -59,12 +55,19 @@
                     <span>Runtime</span>
                     <span>{{ movie['runtime'] }} min</span>
                 </li>
+                <li v-show="movie['homepage']">
+                    <span>Homepage</span>
+                    <span><a target="_blank" :href="movie['homepage']">{{movie['homepage']}}</a></span>
+                </li>
+                <li v-if="movie['imdb_id']">
+                    <span>IMDb</span>
+                    <span><a target="_blank" :href="'https://www.imdb.com/title/' +movie['imdb_id']">
+                        {{'https://www.imdb.com/title/' +movie['imdb_id']}}
+                    </a></span>
+                </li>
                 <li v-show="movie['overview']">
                     <span>Overview</span>
                     <span>{{ movie['overview'] }}</span>
-                    <span v-if="movie['imdb_id']">
-                        <a target="_blank" :href="'https://www.imdb.com/title/' +movie['imdb_id']">IMDb</a>
-                    </span>
                 </li>
             </ul>
         </template>
@@ -122,11 +125,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
 
 .summary {
     height: 100%;
     display: flex;
     justify-content: space-between;
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        align-items: center;
+    }
     padding: 3% 2%;
 
     img {
