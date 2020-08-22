@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baeea96d-e162-4ee0-8215-55625c6e5a61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/SearchComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/SearchComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ShowComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ShowComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/TrendingComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/TrendingComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/parts/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/parts/_navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/parts/_search.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/parts/_search.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +181,7 @@
       <workItem from="1597817289547" duration="34651000" />
       <workItem from="1597924484794" duration="1146000" />
       <workItem from="1597993845689" duration="24372000" />
-      <workItem from="1598079341752" duration="13909000" />
+      <workItem from="1598079341752" duration="15113000" />
     </task>
     <task id="LOCAL−00001" summary="Trending movies &amp; single movie show views">
       <created>1597777272207</created>
@@ -225,7 +213,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1598034501362</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Responsive style readjustments">
+      <created>1598102540704</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1598102540704</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +231,8 @@
     <MESSAGE value="Trending navigation and validations" />
     <MESSAGE value="Movie search functionality" />
     <MESSAGE value="Search pagination &amp; responsive layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search pagination &amp; responsive layout" />
+    <MESSAGE value="Responsive style readjustments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Responsive style readjustments" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="72" width="1089" height="727" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597995425551">
@@ -252,10 +247,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1597771337300" />
-    <state x="132" y="0" width="1006" height="834" key="CommitChangelistDialog2" timestamp="1598034495661">
+    <state x="132" y="0" width="1006" height="834" key="CommitChangelistDialog2" timestamp="1598102534659">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="132" y="0" width="1006" height="834" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1598034495661" />
+    <state x="132" y="0" width="1006" height="834" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1598102534659" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1597750561618">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -284,10 +279,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1597343176809" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1598034506726">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1598102561125">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1598034506726" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1598102561125" />
     <state x="32" y="26" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598080951828">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -300,9 +295,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1597774310768" />
-    <state x="430" y="154" width="672" height="678" key="search.everywhere.popup" timestamp="1598100039418">
+    <state x="430" y="154" width="672" height="678" key="search.everywhere.popup" timestamp="1598102552636">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="430" y="154" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1598100039418" />
+    <state x="430" y="154" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1598102552636" />
   </component>
 </project>
