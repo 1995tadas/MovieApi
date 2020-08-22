@@ -1,21 +1,14 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-}
-body, #app {
-    height: 100%;
-}
-
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-@import "fonts";
+@import 'fonts';
 
+@import 'global';
 // Parts
 @import 'parts/navbar';
+
 @import 'parts/search';
 

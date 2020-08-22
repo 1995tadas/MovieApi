@@ -1,5 +1,6 @@
 <template>
-    <div v-if="loaded" class="carousel">
+    <div v-if="loaded" class="custom-container carousel">
+        <h1 class="trending-title">Trending movies</h1>
         <a @click.prevent="changePage(-3)" class="navigation"><i class="fas fa-angle-left"></i></a>
         <a :href="showRoute+'/'+movie['id']" class="item" v-for="movie in this.movies"
            :style="{ backgroundImage: 'url(https://image.tmdb.org/t/p/w342/' + movie['poster_path'] + ')' }">
@@ -79,17 +80,37 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
 .carousel {
     display: flex;
     align-content: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 5% 0;
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+    }
+
+    .trending-title {
+        text-align: center;
+        margin-bottom: 50px;
+        flex-basis: 100%;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+        }
+    }
 
     .navigation {
         display: flex;
         align-items: center;
         font-size: 3rem;
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
 
         &:hover {
             text-decoration: none;
@@ -106,6 +127,15 @@ export default {
         display: flex;
         align-items: flex-end;
         justify-content: center;
+        @include media-breakpoint-down(sm) {
+            width: 342px;
+            height: 513px;
+            max-width: 100vw;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
 
         .item-title {
             padding: 10px;

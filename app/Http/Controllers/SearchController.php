@@ -39,7 +39,7 @@ class SearchController extends Controller
         if ($status === 422 || $status === 34) {
             return view('search', ['error' => 'Page don\'t exist']);
         } else if ($body->total_pages <= 0) {
-            return view('search', ['error' => 'Nothing was found']);
+            return view('search', ['error' => 'Nothing was found for: ' . $query]);
         } else if ($status === 200) {
             $pageList = $paginationService->paginationForSearch($page, $body->total_pages);
             return view('search', ['data' => $body], compact('pageList', 'query'));

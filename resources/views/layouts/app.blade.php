@@ -13,7 +13,9 @@
 <div id="app">
     <nav>
         <div>
-            <a href="{{route('home')}}">Home</a>
+            @if(Route::current()->getName() !== 'home')
+                    <a href="{{route('home')}}">Home</a>
+            @endif
         </div>
         <div>
             <search-component
@@ -25,7 +27,9 @@
 {{--            <a href="#">Link 3</a>--}}
         </div>
     </nav>
-    @yield('content')
+    <div class="content">
+        @yield('content')
+    </div>
 </div>
 </body>
 </html>

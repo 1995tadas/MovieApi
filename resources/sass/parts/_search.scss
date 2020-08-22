@@ -1,11 +1,27 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
 .search-pagination {
     text-align: center;
     margin: 20px 0;
 
     .search-page {
-        background-color: #fcd772;
+        border: 1px solid #fcd772;
         padding: 10px 20px;
         font-size: 1.5em;
+        @include media-breakpoint-down(sm) {
+            padding: 5px;
+            font-size: 1.2em;
+        }
+
+        &:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+
+        &:last-child {
+            border-radius: 0 10px 10px 0;
+        }
 
         &:hover {
             text-decoration: none;
@@ -13,7 +29,7 @@
     }
 
     .search-current-page {
-        background-color: #72f7f0;
+        background-color: #fcd772;
     }
 }
 

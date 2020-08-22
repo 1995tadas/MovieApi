@@ -1,12 +1,15 @@
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px;
+    min-height: 50px;
     background-color: #fcd772;
+    box-sizing: border-box;
     @include media-breakpoint-down(sm) {
         justify-content: center;
         flex-direction: column;
@@ -14,6 +17,14 @@ nav {
 
     div {
         transition: 0.5s linear;
+        @include media-breakpoint-down(sm) {
+            &:first-child {
+                margin-bottom: 15px;
+            }
+            &:empty {
+                margin-bottom: 0;
+            }
+        }
 
         a {
             color: #2d2d2e;

@@ -57,12 +57,12 @@
                 </li>
                 <li v-show="movie['homepage']">
                     <span>Homepage</span>
-                    <span><a target="_blank" :href="movie['homepage']">{{movie['homepage']}}</a></span>
+                    <span><a target="_blank" :href="movie['homepage']">{{ movie['homepage'] }}</a></span>
                 </li>
                 <li v-if="movie['imdb_id']">
                     <span>IMDb</span>
                     <span><a target="_blank" :href="'https://www.imdb.com/title/' +movie['imdb_id']">
-                        {{'https://www.imdb.com/title/' +movie['imdb_id']}}
+                        {{ 'https://www.imdb.com/title/' + movie['imdb_id'] }}
                     </a></span>
                 </li>
                 <li v-show="movie['overview']">
@@ -142,12 +142,19 @@ export default {
     img {
         height: 50%;
         flex: 1;
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+        }
     }
 
     .characteristics {
         padding: 0;
         margin-left: 20px;
         flex: 4;
+        @include media-breakpoint-down(sm) {
+            margin-left: 0;
+            flex: 1;
+        }
 
         li {
             display: flex;
@@ -156,10 +163,28 @@ export default {
             border-bottom: 3px dotted black;
             padding-top: 5px;
 
+            &:not(:last-child) {
+                line-height: 1.5;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1em;
+            }
+
             &:last-child {
                 align-items: center;
                 flex-direction: column;
                 border-bottom: none;
+
+                span:first-of-type {
+                    font-size: 1.5em;
+                    margin: 10px 0;
+                }
+
+                span:last-of-type {
+                    font-size: 1.3em;
+                    text-align: justify;
+                }
             }
         }
     }

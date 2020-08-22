@@ -1,17 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;
 
 500&display=swap);@charset "UTF-8";
-html,
-body {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-}
-
-body,
-#app {
-  height: 100%;
-}
 
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
@@ -19,7 +8,6 @@ body,
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
 :root {
   --blue: #3490dc;
   --indigo: #6574cd;
@@ -10917,12 +10905,59 @@ a.text-dark:focus {
   }
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+body,
+#app {
+  min-height: 100vh;
+}
+
+.content {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.error {
+  font-size: 2em;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .error {
+    font-size: 1em;
+  }
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2em;
+}
+
+.custom-container {
+  padding: 3% 2%;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px;
+  min-height: 50px;
   background-color: #fcd772;
+  box-sizing: border-box;
 }
 
 @media (max-width: 767.98px) {
@@ -10934,6 +10969,16 @@ nav {
 
 nav div {
   transition: 0.5s linear;
+}
+
+@media (max-width: 767.98px) {
+  nav div:first-child {
+    margin-bottom: 15px;
+  }
+
+  nav div:empty {
+    margin-bottom: 0;
+  }
 }
 
 nav div a {
@@ -10964,9 +11009,24 @@ nav div a:hover {
 }
 
 .search-pagination .search-page {
-  background-color: #fcd772;
+  border: 1px solid #fcd772;
   padding: 10px 20px;
   font-size: 1.5em;
+}
+
+@media (max-width: 767.98px) {
+  .search-pagination .search-page {
+    padding: 5px;
+    font-size: 1.2em;
+  }
+}
+
+.search-pagination .search-page:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.search-pagination .search-page:last-child {
+  border-radius: 0 10px 10px 0;
 }
 
 .search-pagination .search-page:hover {
@@ -10974,7 +11034,7 @@ nav div a:hover {
 }
 
 .search-pagination .search-current-page {
-  background-color: #72f7f0;
+  background-color: #fcd772;
 }
 
 .search-results {

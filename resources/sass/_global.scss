@@ -1,0 +1,37 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+body, #app {
+    min-height: 100vh;
+}
+
+.content {
+    min-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.error {
+    font-size: 2em;
+    text-align:center;
+    @include media-breakpoint-down(sm) {
+        font-size: 1em;
+    }
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2em
+}
+
+.custom-container {
+    padding: 3% 2%;
+}

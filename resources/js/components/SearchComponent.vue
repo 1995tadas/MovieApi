@@ -1,6 +1,6 @@
 <template>
     <form method="get" :action="searchRoute+'/'+query">
-        <input @mouseover="hover = true" @mouseleave="hover = false" type="text" v-model="query" required>
+        <input @mouseover="hover = true" @mouseleave="hover = false" type="text" v-model="query" maxlength="30" required>
         <button :class="{hoverButton:hover}" :disabled="!query"><i class="fas fa-search"></i></button>
     </form>
 </template>
@@ -49,13 +49,13 @@ form {
         border: 0.1px solid gray;
         border-left: 0;
         margin-left: -5px;
-        padding: 2.5px 5px;
+        padding: 2.6px 5px 3.8px 5px;
         background-color: white;
     }
 
     .hoverButton {
         border: 0;
-        padding: 1px 5px;
+        padding: 1.2px 5px 2.8px 5px;
     }
 }
 </style>
