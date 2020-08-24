@@ -7,7 +7,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    min-height: 50px;
+    min-height: 10vh;
     background-color: #fcd772;
     box-sizing: border-box;
     @include media-breakpoint-down(sm) {

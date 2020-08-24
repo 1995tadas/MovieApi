@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
     <div class="custom-container">
-        {{--        {{dd($data)}}--}}
         @if(isset($error))
             <div class="error">{{$error}}</div>
         @else

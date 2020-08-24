@@ -8,7 +8,10 @@
         </a>
         <a @click.prevent="changePage(3)" class="navigation"><i class="fas fa-angle-right"></i></a>
     </div>
-    <b-spinner v-else class='spinner' style="width: 3rem; height: 3rem;" label="Large Spinner"></b-spinner>
+    <div v-else class="loader">
+        <img class="spinner" :src="filmReel" alt="Film reel">
+        <div class="tape"></div>
+    </div>
 </template>
 
 <script>
@@ -19,6 +22,10 @@ export default {
             required: true
         },
         showRoute: {
+            type: String,
+            required: true
+        },
+        filmReel: {
             type: String,
             required: true
         }
@@ -47,7 +54,7 @@ export default {
                 setTimeout(
                     () => {
                         this.loaded = true
-                    }, 200
+                    }, 500
                 )
             )
         },

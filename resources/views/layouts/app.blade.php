@@ -13,8 +13,8 @@
 <div id="app">
     <nav>
         <div>
-            @if(Route::current()->getName() !== 'home')
-                    <a href="{{route('home')}}">Home</a>
+            @if(!Route::is('home'))
+                <a href="{{route('home')}}">Home</a>
             @endif
         </div>
         <div>
