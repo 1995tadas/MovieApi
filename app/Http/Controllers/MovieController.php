@@ -17,4 +17,12 @@ class MovieController extends Controller
         $trendingMovies = $movieService->fetchTrendingMoviesFromApi();
         return response()->json($trendingMovies);
     }
+
+    public function fetchMovie(int $id): \Illuminate\Http\JsonResponse
+    {
+        $movieService = new MovieService();
+        $movie = $movieService->fetchMovieFromApi($id);
+        $preparedMovie = $movieService->prepareMovie($movie);
+        return response()->json($preparedMovie);
+    }
 }

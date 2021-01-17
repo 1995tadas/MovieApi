@@ -1,0 +1,64 @@
+.movie-summary {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 2%;
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        height: 50%;
+        flex: 1;
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+        }
+    }
+
+    .movie-descriptions {
+        padding: 0;
+        margin-left: 20px;
+        flex: 4;
+        @include media-breakpoint-down(sm) {
+            margin-left: 0;
+            flex: 1;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2em;
+            border-bottom: 3px dotted black;
+            padding-top: 5px;
+
+            &:not(:last-child) {
+                line-height: 1.5;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1em;
+            }
+
+            .description-title {
+                color: #cb4d4d;
+            }
+
+            &:last-child {
+                align-items: center;
+                flex-direction: column;
+                border-bottom: none;
+
+                span:first-of-type {
+                    font-size: 1.5em;
+                    margin: 10px 0;
+                }
+
+                span:last-of-type {
+                    font-size: 1.3em;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}

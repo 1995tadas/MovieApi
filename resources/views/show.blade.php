@@ -1,8 +1,9 @@
 @extends('layouts.app')
 @section('content')
     <show-component
-        movie-route="https://api.themoviedb.org/3/movie/{{$movieId}}?api_key={{config('services.movieApi.key')}}"
-        film-reel = "{{asset('images\film-reel.png')}}"
-        poster-placeholder = "{{asset('images/placeholder-movieimage.png')}}">
+        :translation="{{ json_encode(trans('movies')) }}"
+        movie-route="{{ route('movies.movie', ['id' => $movieId]) }}"
+        film-reel="{{ asset('images/film-reel.png')}}"
+        poster-placeholder="{{ asset('images/placeholder-movie.png') }}">
     </show-component>
 @endsection
