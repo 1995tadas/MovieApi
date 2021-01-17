@@ -1,0 +1,25 @@
+.search-form {
+    display: inline;
+    width: 100px;
+    height: 100%;
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+
+    input[type=text] {
+        &:focus {
+            outline: none;
+        }
+
+        height: 50%;
+    }
+
+    input[type=submit] {
+        border: none;
+        background-color: #fff;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

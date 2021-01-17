@@ -6,12 +6,25 @@ class MovieService
 {
     private const API_QUERY_FOR_TRENDING_MOVIES = 'trending/movie/day';
     private const API_QUERY_FOR_MOVIE = 'movie';
+    private const API_QUERY_FOR_SEARCH_MOVIE = 'search/movie';
 
     public function fetchTrendingMoviesFromApi(): object
     {
         $requestService = new RequestService();
         return $requestService->performGetRequestMovieApi(self::API_QUERY_FOR_TRENDING_MOVIES,
             ['api_key' => config('app.movies_api_key')]);
+    }
+
+    public function searchMovieFromApi(string $query, int $page): object
+    {
+        $requestService = new RequestService();
+        return $requestService->performGetRequestMovieApi(
+            self::API_QUERY_FOR_SEARCH_MOVIE, [
+            'api_key' => config('app.movies_api_key'),
+            'page' => $page,
+            'query' => $query,
+            'include_adult' => 'false',
+        ]);
     }
 
     public function fetchMovieFromApi(int $movieId): object

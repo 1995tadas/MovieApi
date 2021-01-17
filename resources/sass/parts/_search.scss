@@ -1,7 +1,3 @@
-@import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/mixins/_breakpoints";
-
 .search-pagination {
     text-align: center;
     margin: 20px 0;
@@ -33,12 +29,16 @@
     }
 }
 
+.search-empty {
+    font-size: 3vw;
+}
+
 .search-results {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
-    .search-thumbnail {
+    a {
         text-align: center;
         flex: 1 0 calc(20% - 10px);
         margin: 0 10px;

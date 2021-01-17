@@ -7,15 +7,18 @@
         <img v-if="movie.poster_path" :src="movie.poster_path">
         <img v-else :src="posterPlaceholder" :alt="translation.placeholder">
         <ul class="movie-descriptions">
-            <li v-for="(detail, index) in movie" v-if="index !== 'poster_path'">
-                <span class="description-title">{{ translation[index] }}</span>
+            <li v-for="(detail, index) in movie" v-if="index !== 'poster_path'"
+                :class="{'overview':index === 'overview'}">
+                <span class="description-title">
+                    {{ translation[index] }}
+                </span>
                 <span v-if="!Array.isArray(detail)">
                         <a v-if="typeof detail === 'string' && detail.startsWith('http')" target="_blank"
                            :href="detail">
                             {{ detail }}
                         </a>
                         <template v-else>
-                            {{ detail + (index === 'runtime' ? ' min' : '') }}
+                            {{ detail + (index === 'runtime' ? ' min' : (index === 'budget' ? ' $' : '')) }}
                         </template>
                     </span>
                 <span v-else>

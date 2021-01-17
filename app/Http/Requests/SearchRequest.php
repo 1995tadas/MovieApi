@@ -24,7 +24,8 @@ class SearchRequest extends FormRequest
     public function rules()
     {
         return [
-            'page' =>'integer|min:0'
+            'page' => 'integer|between:1,500',
+            'search_query' => 'required|string|max:30'
         ];
     }
 }

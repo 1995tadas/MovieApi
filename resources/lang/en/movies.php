@@ -8,6 +8,7 @@ return [
     'original_title' => 'Original title',
     'tagline' => 'Tagline',
     'genres' => 'Genres',
+    'budget' => 'Budget',
     'spoken_languages' => 'Spoken Languages',
     'production_countries' => 'Production countries',
     'production_companies' => 'Production companies',

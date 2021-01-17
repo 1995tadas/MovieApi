@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{config('app.name','Laravel')}}</title>
+    <title>{{ config('app.name')}}</title>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <script src="{{asset('js/app.js')}}" defer></script>
@@ -14,17 +14,13 @@
     <nav>
         <div>
             @if(!Route::is('home'))
-                <a href="{{route('home')}}">Home</a>
+                <a href="{{ route('home')}} ">{{__('others.home')}}</a>
             @endif
         </div>
         <div>
-            <search-component
-                search-route="{{route('search.index',['query' => '/'])}}"
-            >
+            <search-component :translation="{{ json_encode(trans('search')) }}"
+                              search-route="{{ route('search.index') }}">
             </search-component>
-{{--            <a href="#">Link 1</a>--}}
-{{--            <a href="#">Link 2</a>--}}
-{{--            <a href="#">Link 3</a>--}}
         </div>
     </nav>
     <div class="content">

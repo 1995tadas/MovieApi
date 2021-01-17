@@ -1,5 +1,6 @@
 .movie-summary {
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 3% 2%;
@@ -32,7 +33,7 @@
             border-bottom: 3px dotted black;
             padding-top: 5px;
 
-            &:not(:last-child) {
+            &:not(.overview) {
                 line-height: 1.5;
             }
 
@@ -43,21 +44,21 @@
             .description-title {
                 color: #cb4d4d;
             }
+        }
 
-            &:last-child {
-                align-items: center;
-                flex-direction: column;
-                border-bottom: none;
+        .overview {
+            align-items: center;
+            flex-direction: column;
+            border-bottom: none;
 
-                span:first-of-type {
-                    font-size: 1.5em;
-                    margin: 10px 0;
-                }
+            span:first-of-type {
+                font-size: 1.5em;
+                margin: 10px 0;
+            }
 
-                span:last-of-type {
-                    font-size: 1.3em;
-                    text-align: justify;
-                }
+            span:last-of-type {
+                font-size: 1.3em;
+                text-align: justify;
             }
         }
     }
