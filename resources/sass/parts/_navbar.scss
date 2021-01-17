@@ -4,7 +4,7 @@ nav {
     align-items: center;
     padding: 10px 20px;
     min-height: 10vh;
-    background-color: #fcd772;
+    background-color: $primary-color;
     box-sizing: border-box;
     @include media-breakpoint-down(sm) {
         justify-content: center;
@@ -37,10 +37,11 @@ nav {
             }
 
             &:hover {
+                color: inherit;
                 transition: 0.3s;
                 border-bottom-color: red;
                 text-decoration: none;
-                color: #2d2d2e;
+                font-weight: 700;
             }
         }
     }

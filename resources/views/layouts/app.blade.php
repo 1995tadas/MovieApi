@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name')}}</title>
+    <link rel='icon' href="{{asset('favicon.ico')}}" type='image/x-icon'>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <script src="{{asset('js/app.js')}}" defer></script>
@@ -14,7 +15,7 @@
     <nav>
         <div>
             @if(!Route::is('home'))
-                <a href="{{ route('home')}} ">{{__('others.home')}}</a>
+                <a href="{{ route('home')}}">{{__('others.home')}}</a>
             @endif
         </div>
         <div>

@@ -3,7 +3,7 @@
     margin: 20px 0;
 
     .search-page {
-        border: 1px solid #fcd772;
+        border: 1px solid $primary-color;
         padding: 10px 20px;
         font-size: 1.5em;
         @include media-breakpoint-down(sm) {
@@ -24,8 +24,14 @@
         }
     }
 
+    .search-page[href] {
+        &:hover {
+            background-color: rgba($primary-color, 0.5);
+        }
+    }
+
     .search-current-page {
-        background-color: #fcd772;
+        background-color: $primary-color;
     }
 }
 
@@ -45,7 +51,7 @@
         padding: 10px 0;
 
         &:hover {
-            background-color: #f7f2ea;
+            background-color: rgba($primary-color, 0.3);
         }
     }
 

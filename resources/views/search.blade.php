@@ -21,7 +21,7 @@
             <div class="search-pagination">
                 @foreach($pageList['pages'] as $page)
                     <a class="search-page {{ $pageList['currentPage'] == $page ? 'search-current-page' : null }}"
-                       @if(is_numeric($page))
+                       @if(is_numeric($page) && $pageList['currentPage'] != $page)
                        href="{{ route('search.index', ['search_query' => $query, 'page' => $page]) }}"
                         @endif>
                         {{$page}}
