@@ -4,7 +4,7 @@ namespace App\Services;
 
 class PaginationService
 {
-    public function paginationForSearch($page, $total_pages)
+    public function paginationForSearch($page, $total_pages): array
     {
         $pageList = [];
         $pageList['currentPage'] = $page;

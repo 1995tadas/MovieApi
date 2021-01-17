@@ -28,6 +28,7 @@ body, #app {
 .error {
     font-size: 2em;
     text-align: center;
+    color: #ff4d5d;
     @include media-breakpoint-down(sm) {
         font-size: 1em;
     }
@@ -49,16 +50,6 @@ body, #app {
         animation-iteration-count: infinite;
 
     }
-    .tape {
-        border-bottom: 7px solid black;
-        width: 150px;
-        border-radius: 15px 0;
-        margin-left: -35px;
-        animation-name: retract;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-    }
-
 }
 
 @keyframes spin {
@@ -70,16 +61,5 @@ body, #app {
     }
     100% {
         transform: rotate(0deg);
-    }
-}
-@keyframes retract {
-    0% {
-        width: 150px;
-    }
-    50% {
-        width: 50px;
-    }
-    100% {
-        width: 150px;
     }
 }
