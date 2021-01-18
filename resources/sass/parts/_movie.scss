@@ -43,6 +43,11 @@
 
             .description-title {
                 color: #cb4d4d;
+                text-align: left;
+            }
+
+            &:not(.description-title) {
+                text-align: right;
             }
         }
 

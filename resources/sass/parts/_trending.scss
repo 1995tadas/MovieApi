@@ -7,14 +7,19 @@
 
     @include media-breakpoint-down(sm) {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
     }
 
     .trending-title {
         text-align: center;
         margin-bottom: 50px;
         flex-basis: 100%;
+        font-size: 3vw;
         @include media-breakpoint-down(sm) {
             margin-bottom: 20px;
+            font-size: 6vw;
         }
     }
 
@@ -42,19 +47,24 @@
         align-items: flex-end;
         justify-content: center;
         @include media-breakpoint-down(sm) {
-            width: 342px;
-            height: 513px;
-            max-width: 100vw;
+            width: 70vmax;
+            height: 80vmax;
             margin-bottom: 10px;
             &:last-child {
                 margin-bottom: 0;
             }
         }
 
+        @media only screen and (max-width: $breakpoint-very-small) {
+            width: 90vmin;
+            height: 60vmax;
+        }
+
         .movie-title {
             padding: 10px;
             font-size: 20px;
             color: white;
+            text-align: center;
             text-shadow: -1px -1px 0 #000,
             1px -1px 0 #000,
             -1px 1px 0 #000,
