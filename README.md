@@ -1,11 +1,12 @@
 # Movie search website
 
 It's just a simple website for showing trending movies.
+
 Search bar lets you find your favorite movie from large movie database 
 
 ## DEMO
 
-https://tadassapitavicius.com/movies/
+https://tadassapitavicius.com/movies
 
 ## Data sources
 
